@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Marketplace</title>
+    <link rel="stylesheet" href="marketplace.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">AgriMarket<span>.</span></h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for animals, feed, tools..." onkeyup="searchProducts()">
+            </div>
+        </div>
+    </header>
+
+    <nav class="category-nav">
+        <div class="container">
+            <button class="cat-btn active" onclick="loadCategory('')">All</button>
+            <button class="cat-btn" onclick="loadCategory('animals')">Home Animals</button>
+            <button class="cat-btn" onclick="loadCategory('birds')">Home Birds</button>
+            <button class="cat-btn" onclick="loadCategory('feed')">Theevanam</button>
+            <button class="cat-btn" onclick="loadCategory('tools')">Tools</button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2 id="categoryTitle">All Listings</h2>
+        <div id="productGrid" class="product-grid">
+            <!-- Products will be loaded here -->
+            <div class="loader">Loading listings...</div>
+        </div>
+    </main>
+
+    <script src="marketplace.js"></script>
+</body>
+</html>
